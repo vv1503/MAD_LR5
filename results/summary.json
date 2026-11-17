@@ -1,0 +1,163 @@
+{
+  "dataset": {
+    "name": "Wine Quality (red)",
+    "source": "https://www.kaggle.com/datasets/yasserh/wine-quality-dataset",
+    "n_rows": 1599,
+    "n_cols": 12,
+    "missing": 0,
+    "quality_counts": {
+      "3": 10,
+      "4": 53,
+      "5": 681,
+      "6": 638,
+      "7": 199,
+      "8": 18
+    }
+  },
+  "clope": {
+    "method": "CLOPE",
+    "params": {
+      "r": 1.5,
+      "n_clusters": 2
+    },
+    "external": {
+      "ARI": 0.13332378629808553,
+      "NMI": 0.11182854907322119,
+      "Homogeneity": 0.08559767296600977,
+      "Completeness": 0.16123934721626004,
+      "V-measure": 0.11182854907322119
+    },
+    "profit": 55.18553540231875,
+    "cluster_sizes": {
+      "0": 1083,
+      "1": 516
+    },
+    "top_features": [
+      {
+        "feature": "alcohol",
+        "F": 3787.409415823764,
+        "p_value": 0.0
+      },
+      {
+        "feature": "density",
+        "F": 354.1631249256168,
+        "p_value": 1.6184553082209206e-71
+      },
+      {
+        "feature": "quality",
+        "F": 290.6450472881041,
+        "p_value": 5.267544784610474e-60
+      },
+      {
+        "feature": "total sulfur dioxide",
+        "F": 60.119086518020595,
+        "p_value": 1.5793675312227135e-14
+      },
+      {
+        "feature": "chlorides",
+        "F": 48.521155514495725,
+        "p_value": 4.759261527794327e-12
+      }
+    ]
+  },
+  "gower": {
+    "method": "Gower + PAM (k-medoids)",
+    "params": {
+      "k": 2,
+      "distance": "Gower",
+      "silhouette": 0.24615097045898438
+    },
+    "external": {
+      "ARI": 0.04088220007016462,
+      "NMI": 0.03658095478092323,
+      "Homogeneity": 0.028647045270121414,
+      "Completeness": 0.05059283537799762,
+      "V-measure": 0.03658095478092323
+    },
+    "cluster_sizes": {
+      "0": 968,
+      "1": 631
+    },
+    "top_features": [
+      {
+        "feature": "citric acid",
+        "F": 2554.167039188144,
+        "p_value": 0.0
+      },
+      {
+        "feature": "fixed acidity",
+        "F": 1533.0384653182066,
+        "p_value": 1.2516870831214797e-235
+      },
+      {
+        "feature": "volatile acidity",
+        "F": 514.4435961521002,
+        "p_value": 5.864872783371026e-99
+      },
+      {
+        "feature": "pH",
+        "F": 478.83343510618687,
+        "p_value": 4.770726496605491e-93
+      },
+      {
+        "feature": "density",
+        "F": 243.97878744902275,
+        "p_value": 2.721630432411075e-51
+      }
+    ],
+    "kmodes_external": {
+      "ARI": 0.03193366440860014,
+      "NMI": 0.07917911666633735,
+      "Homogeneity": 0.09823523761391519,
+      "Completeness": 0.0663150246972342,
+      "V-measure": 0.07917911666633735
+    },
+    "kmodes_k": 6
+  },
+  "comparison": [
+    {
+      "method": "CLOPE",
+      "ARI": 0.1333237862980855,
+      "NMI": 0.1118285490732211,
+      "Homogeneity": 0.0855976729660097,
+      "Completeness": 0.16123934721626,
+      "V-measure": 0.1118285490732211,
+      "n_clusters": 2
+    },
+    {
+      "method": "Gower+PAM",
+      "ARI": 0.0408822000701646,
+      "NMI": 0.0365809547809232,
+      "Homogeneity": 0.0286470452701214,
+      "Completeness": 0.0505928353779976,
+      "V-measure": 0.0365809547809232,
+      "n_clusters": 2
+    },
+    {
+      "method": "K-modes",
+      "ARI": 0.0319336644086001,
+      "NMI": 0.0791791166663373,
+      "Homogeneity": 0.0982352376139151,
+      "Completeness": 0.0663150246972342,
+      "V-measure": 0.0791791166663373,
+      "n_clusters": 6
+    }
+  ],
+  "agreement": [
+    {
+      "pair": "CLOPE vs Gower",
+      "ARI": 0.04860422342879354,
+      "NMI": 0.022911279492029105
+    },
+    {
+      "pair": "CLOPE vs quality",
+      "ARI": 0.13332378629808553,
+      "NMI": 0.11182854907322119
+    },
+    {
+      "pair": "Gower vs quality",
+      "ARI": 0.04088220007016462,
+      "NMI": 0.03658095478092322
+    }
+  ]
+}
